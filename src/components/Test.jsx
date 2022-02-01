@@ -1,8 +1,8 @@
-export function Test(props){
+export function Test(props) {
 
-    return(
-        <div>
-            hello !!!
+    return (
+        <div >
+
         </div>
-    );
+    )
 }
