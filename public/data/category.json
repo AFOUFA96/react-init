@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "image":"/assets/images/Pantalons.jpg" ,
+        "title": "Pantalons",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ducimus labore! Dolorem modi expedita beatae esse, tempore pariatur deserunt, sapiente fuga impedit sed dolore corrupti magni omnis veritatis nisi illum!"
+    },
+    {
+        "id": 2,
+        "image":"/assets/images/T-shirts.jpg" ,
+        "title": "T-shirts",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ducimus labore! Dolorem modi expedita beatae esse, tempore pariatur deserunt, sapiente fuga impedit sed dolore corrupti magni omnis veritatis nisi illum!"
+    },
+    {
+        "id": 3,
+        "image":"/assets/images/Pulls.jpg" ,
+        "title": "Pulls",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ducimus labore! Dolorem modi expedita beatae esse, tempore pariatur deserunt, sapiente fuga impedit sed dolore corrupti magni omnis veritatis nisi illum!"
+    },
+    {
+        "id": 4,
+        "image":"/assets/images/Chaussures.jpg" ,
+        "title": "Chaussures",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ducimus labore! Dolorem modi expedita beatae esse, tempore pariatur deserunt, sapiente fuga impedit sed dolore corrupti magni omnis veritatis nisi illum!"
+    },
+    {
+        "id": 5,
+        "image":"/assets/images/Sous-vêtements.jpg" ,
+        "title": "Sous-vêtements",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ducimus labore! Dolorem modi expedita beatae esse, tempore pariatur deserunt, sapiente fuga impedit sed dolore corrupti magni omnis veritatis nisi illum!"
+    },
+    {
+        "id": 6,
+        "image":"/assets/images/Accessoires.jpg" ,
+        "title": "Accessoires",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ducimus labore! Dolorem modi expedita beatae esse, tempore pariatur deserunt, sapiente fuga impedit sed dolore corrupti magni omnis veritatis nisi illum!"
+    }
+]

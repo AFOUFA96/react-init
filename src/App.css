@@ -1,7 +1,25 @@
 .App {
-  /* text-align: center; */
+  background: rgba(10,25,41,255);
+  min-height: 100vh;
 }
 .card{
   width: 18rem;
 }
-
+.myNav{
+  background-color: aliceblue;
+}
+.myCol{
+  color: rgba(191,58,58,255);
+  font-size: large;
+  margin-left: 24px;
+  font-weight: 500;
+}
+.myTitle{
+  background: rgba(10,25,41,255);
+  color: aliceblue;
+  font-size: xx-large;
+  padding: 15px;
+}
+.myColor{
+  color:  rgba(191,58,58,255);;
+}
