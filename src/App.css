@@ -2,9 +2,7 @@
   background: rgba(10,25,41,255);
   min-height: 100vh;
 }
-.card{
-  width: 18rem;
-}
+
 .myNav{
   background-color: aliceblue;
 }
@@ -18,8 +16,19 @@
   background: rgba(10,25,41,255);
   color: aliceblue;
   font-size: xx-large;
-  padding: 15px;
+  padding: 30px;
 }
 .myColor{
-  color:  rgba(191,58,58,255);;
+  color:  rgba(191,58,58,255);
+}
+.myMesg{
+  display: flex;
+  color: aliceblue;
+  background-color: rgba(191,58,58,255) ;
+  /* position:absolute; */
+  height: 26px;
+  overflow: hidden;
+}
+.text-deco-none{
+  text-decoration: none;
 }

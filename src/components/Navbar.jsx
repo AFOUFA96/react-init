@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { GenderService } from "../services/gender.service";
-// import '../components/styles/genderMenu.css'
+import { Link } from "react-router-dom";
+
 
 export function Navbar(props) {
 
@@ -17,12 +18,21 @@ export function Navbar(props) {
 
     return (
         <div>
+        <div className='text-center myTitle  '>
+        <Link to="/home" className="myColor text-decoration-none"> 
+            Shop Online
+        </Link>
+        </div>
+        
+        
             <ul className="myNav nav justify-content-center">
             {genders.map(gender => {
                 return (
+                    <Link to="/category">
                     <li className="nav-item">
                         <a className="myCol nav-link active"  href="#">{gender.title}</a>
                     </li>
+                    </Link>
                 );
             })  }
             </ul>

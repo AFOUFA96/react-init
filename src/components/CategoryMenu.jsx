@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CategoryService } from "../services/category.service";
 import { Card } from '../components/Card';
-import '../components/styles/categoryMenu.css'
+
 
 export function CategoryMenu(props){
 

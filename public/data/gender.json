@@ -1,18 +1,22 @@
 [
     {
         "id": 1,
-        "title": "Hommes"
+        "title": "Hommes",
+        "image":"/assets/images/hommes.jpg" 
     },
     {
         "id": 2,
-        "title": "Femmes"
+        "title": "Femmes",
+        "image":"/assets/images/femmes.jpg"
     },
     {
         "id": 3,
-        "title": "Enfants"
+        "title": "Enfants",
+        "image":"/assets/images/enfants.jpg"
     },
     {
         "id": 4,
-        "title": "Bébés"
+        "title": "Bébés",
+        "image":"/assets/images/bebes.jpg"
     }
 ]

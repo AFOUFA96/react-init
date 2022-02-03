@@ -9,5 +9,6 @@ export class Gender extends BaseModel{
     }
 
     title = "";
+    image = "";
 
 }

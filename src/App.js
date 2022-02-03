@@ -22,6 +22,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/category" element={<CategoryPage />} />
         </Routes>
       </Router>

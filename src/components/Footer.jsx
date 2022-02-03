@@ -10,8 +10,8 @@ export function Footer(props) {
                         <div class="col-md-12 py-5">
                             <div class="mb-5 flex-center">
                                 <a class="fb-ic">
-                                    <FaFacebook />
-                                    <i class="bi bi-arrow-90deg-up"></i>
+                                    {/* <FaFacebook /> */}
+                                    <i class="bi bi-arrow-90deg-up text-danger"></i>
                                 </a>
                                 <a class="tw-ic">
                                     <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
