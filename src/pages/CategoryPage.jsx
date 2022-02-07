@@ -1,25 +1,16 @@
 import { CategoryMenu } from "../components/CategoryMenu"
-import { Navbar } from '../components/Navbar';
-import { Footer } from "../components/Footer";
 import '../components/styles/categoryPage.css';
-import { TextScroller } from '../components/TextScroller';
 
-
-
-export function CategoryPage(props) {
+function CategoryPage(props) {
     let gender = JSON.parse(localStorage.getItem("data"));
     console.log(gender[1]);
     let message = "** Livraison gratuite à partir de 79€ sur toutes les commandes à domicile et en point de relais **";
-    return (
-        
-<>
-
-            <Navbar />
-            <TextScroller text = {message} />
+    return (       
+        <>
             <div className=" myCards container"> 
                 <CategoryMenu />    
             </div>
-            <Footer />
-            </>  
+        </>  
     )
 }
+export default CategoryPage;

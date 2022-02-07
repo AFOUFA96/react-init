@@ -5,9 +5,13 @@ import { GenderService } from "./services/gender.service";
 import { Card } from './components/Card';
 import { Navbar } from './components/Navbar';
 import { CategoryMenu } from './components/CategoryMenu';
-import React from "react";
-import { CategoryPage } from "./pages/CategoryPage"
-import { HomePage } from "./pages/HomePage"
+import React, {Suspense} from "react";
+import LoadingSpinner from './components/LoadingSpinner';
+import  CategoryPage  from "./pages/CategoryPage";
+import  HomePage  from "./pages/HomePage";
+import BaseScreen from './pages/BaseScreen';
+import NotFoundScreen from './pages/NotFound';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +19,7 @@ import {
   Routes,
   Link
 } from "react-router-dom";
+
 
 function App() {
 
@@ -41,18 +46,28 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Navbar /> */}
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<BaseScreen />} >
+            <Route index  element={
+              <Suspense fallback={<LoadingSpinner />}>
+                <HomePage />
+              </Suspense>}
+            />
 
-          {genders.map(gender => {
-            return(
-              <Route path={cleanString(gender.title)} element={<CategoryPage />} />
-            )
-          })}
-          
+            {genders.map(gender => {
+              return(
+                <Route path={cleanString(gender.title)} element={
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <CategoryPage />
+                  </Suspense>}
+                /> 
+              );
+            })};
+            
+          </Route>
+          <Route path ="*"  element={<NotFoundScreen />} />
+
         </Routes>
       </Router>
       

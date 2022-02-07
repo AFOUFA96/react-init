@@ -32,3 +32,15 @@
 .text-deco-none{
   text-decoration: none;
 }
+main {
+  height: 100%;
+  margin-top: -56px;
+  padding-top: 56px;
+}
+.spinner{
+  position: absolute;
+  margin: auto;
+  margin-top: calc(50vh - 56px);
+  margin: 50%;
+  transform: translate(-50%);
+}
