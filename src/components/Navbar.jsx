@@ -26,7 +26,7 @@ export function Navbar(props) {
             {genders.map(gender => {
                 return (
                     
-                    <li className="nav-item">
+                    <li key = {gender.id} className="nav-item">
                     <Link to={gender.title} className="nav-link myColor">{gender.title}</Link>
                         
                     </li>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Card } from '../components/Card';
-import { GenderService } from '../services/gender.service';
+import  Card  from '../components/Card';
+import  {GenderService } from '../services/gender.service';
 import '../components/styles/homePage.css';
 import { Link } from "react-router-dom";
 
@@ -30,16 +30,14 @@ function HomePage(props) {
                 <div className='row'>
                     {genders.map(gender => {
                         return (
-                            <div className="col-sm-6 col-md-6">
-                                <Link to={gender.title} className="myColor text-decoration-none">
+                            <div key = {gender.id} className="col-sm-6 col-md-6"  >
                                     <Card fonction={doThis}
-
+                                    route = {gender.title}
                                     id ={gender.id}
                                         image={process.env.PUBLIC_URL + gender.image}
                                         title={gender.title}
                                         classes="cardGender"
                                     />
-                                </Link>
                             </div>
                         )
                     })}

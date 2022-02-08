@@ -32,6 +32,7 @@
 .text-deco-none{
   text-decoration: none;
 }
+
 main {
   height: 100%;
   margin-top: -56px;
@@ -41,6 +42,12 @@ main {
   position: absolute;
   margin: auto;
   margin-top: calc(50vh - 56px);
-  margin: 50%;
-  transform: translate(-50%);
+  margin-left: 50%;
+  transform: translateY(-50%);
 }
+/* ---------card's img---------- */
+#img{
+        height: 250px;
+        /* max-width: 300px; */
+        object-fit:cover;
+  }

@@ -1,30 +1,22 @@
-
 import './App.css';
 import { useEffect, useState } from "react";
 import { GenderService } from "./services/gender.service";
-import { Card } from './components/Card';
-import { Navbar } from './components/Navbar';
-import { CategoryMenu } from './components/CategoryMenu';
+import { CategoryService } from "./services/Category.service";
+import {BrowserRouter as Router, Switch, Route, Routes, Link} from "react-router-dom";
 import React, {Suspense} from "react";
 import LoadingSpinner from './components/LoadingSpinner';
-import  CategoryPage  from "./pages/CategoryPage";
-import  HomePage  from "./pages/HomePage";
-import BaseScreen from './pages/BaseScreen';
-import NotFoundScreen from './pages/NotFound';
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Routes,
-  Link
-} from "react-router-dom";
-
+import BaseScreen from './pages/BaseScreen' ;
+const  CategoryPage = React.lazy(() =>   import("./pages/CategoryPage")) ;
+const  ProductPage = React.lazy(() =>   import("./pages/ProductPage")) ;
+const  HomePage = React.lazy(() =>   import("./pages/HomePage"));
+// const NotFoundScreen = React.lazy(() =>   import('./pages/NotFound'));
+// const Test = React.lazy(() =>   import('./pages/Test')) ;
 
 function App() {
 
 
   const [genders, setGenders] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect( () => {
       const fetchData = async () => {
@@ -33,16 +25,18 @@ function App() {
           setGenders(data);
       }
       fetchData().catch(console.error);
-  }, [])
-  function cleanString(input) {
-    var output = "";
-    for (var i=0; i<input.length; i++) {
-        if (input.charCodeAt(i) <= 127) {
-            output += input.charAt(i);
-        }
+  }, []);
+
+  useEffect( () => {
+    const fetchData = async () => {
+        let service = new CategoryService();
+        let data = await service.getAll();
+        setCategories(data);
     }
-    return output;
-}
+    fetchData().catch(console.error);
+}, [])
+
+  
 
   return (
     <div className="App">
@@ -57,17 +51,29 @@ function App() {
 
             {genders.map(gender => {
               return(
-                <Route path={cleanString(gender.title)} element={
+                <Route path={gender.title} element={
                   <Suspense fallback={<LoadingSpinner />}>
-                    <CategoryPage />
+                    <CategoryPage gender = {gender.title}/>
                   </Suspense>}
+
+                  
                 /> 
               );
             })};
+
+            {/* {genders.map(category => {
+              return(
+                <Route path={category.title} element={
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <ProductPage gender = {gender.title}/>
+                  </Suspense>}
+                /> 
+              );
+            })}; */}
             
           </Route>
-          <Route path ="*"  element={<NotFoundScreen />} />
-
+          {/* <Route path ="*"  element={<NotFoundScreen />} /> */}
+          {/* <Route path ="/test"  element={<Test />} /> */}
         </Routes>
       </Router>
       
